@@ -1,9 +1,142 @@
+/* .7951 */
+
 body {
     margin: 0;
+    background-color: black;
 }
 
 #cityBackground {
+    position: absolute;
+    opacity: 0.5;
     width: 100vw;
     height: 100vh;
     z-index: -999;
 }
+
+@keyframes floatMove {
+    0% {left: 100vw}
+    25% {left: 69vw}
+    50% {left: 38vw}
+    75% {left: 7vw}
+    100% {left: -25vw}
+}
+
+@keyframes floatFlagMoveA {
+    0% {left: 100.1vw}
+    25% {left: 69.1vw}
+    50% {left: 38.1vw}
+    75% {left: 7.1vw}
+    100% {left: -24.9vw}
+}
+@keyframes floatFlagMoveB {
+    0% {left: 105.7vw}
+    25% {left: 74.7vw}
+    50% {left: 43.7vw}
+    75% {left: 12.7vw}
+    100% {left: -19.5vw}
+}
+@keyframes floatFlagMoveC {
+    0% {left: 111.3vw}
+    25% {left: 80.3vw}
+    50% {left: 49.3vw}
+    75% {left: 17.9vw}
+    100% {left: -14vw}
+}
+
+.floatA,
+.floatB,
+.floatC,
+.floatD {
+    left: 100vw;
+    position: absolute;
+    bottom: 10vh;
+    width: 25vw;
+    height: auto;
+    z-index: 1;
+    animation: floatMove 6s infinite linear;
+}
+
+.floatFlagA,
+.floatFlagB,
+.floatFlagC {
+    left: 100vw;
+    position: absolute;
+    bottom: 10vh;
+    width: 12.5vw;
+    height: auto;
+    z-index: 2;
+}
+
+.floatFlagA {
+    animation: floatFlagMoveA 6s infinite linear;
+}
+
+.floatFlagB {
+    animation: floatFlagMoveB 6s infinite linear;
+}
+
+.floatFlagC {
+    animation: floatFlagMoveC 6s infinite linear;
+}
+
+.goB {
+    animation-delay: 1.5s;
+}
+
+.goC {
+    animation-delay: 3s;
+}
+
+.goD {
+    animation-delay: 4.5s;
+}
+
+@keyframes fireworkA {
+    0% {left: 58vw; top: 5vh}
+    25% {left: 34vw; top: 5vh}
+    50% {left: 41vw; top: 7vh}
+    75% {left: 13vw; top: 5vh}
+    100% {left: 38vw; top: 20vh}
+}
+@keyframes fireworkB {
+    0% {left: 9vw; top: 11vh}
+    25% {left: 46vw; top: 20vh}
+    50% {left: 14vw; top: 20vh}
+    75% {left: 65vw; top: 12vh}
+    100% {left: 46vw; top: 0vh}
+}
+@keyframes fireworkC {
+    0% {left: 7vw; top: 0vh}
+    25% {left: 51vw; top: 12vh}
+    50% {left: 67vw; top: 13vh}
+    75% {left: 11vw; top: 13vh}
+    100% {left: 55vw; top: 14vh}
+}
+@keyframes fireworkD {
+    0% {left: 46vw; top: 5vh}
+    25% {left: 4vw; top: 0vh}
+    50% {left: 37vw; top: 19vh}
+    75% {left: 62vw; top: 16vh}
+    100% {left: 48vw; top: 6vh}
+}
+
+.fireworksA,
+.fireworksB,
+.fireworksC,
+.fireworksD {
+    position: absolute;
+}
+
+.fireworksA {
+    animation: fireworkA 30s steps(4, end) infinite;
+}
+.fireworksB {
+    animation: fireworkB 30s steps(4, end) infinite;
+}
+.fireworksC {
+    animation: fireworkC 30s steps(4, end) infinite;
+}
+.fireworksD {
+    animation: fireworkD 30s steps(4, end) infinite;
+}
+
